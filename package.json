@@ -1,6 +1,6 @@
 {
   "homepage": "https://MaroufEbrahimi.github.io/Contact-List",
-  "name": "calsulator",
+  "name": "ContactList",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
