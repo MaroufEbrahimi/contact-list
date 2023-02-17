@@ -1,8 +1,8 @@
 # Fetures
 
-React Hooks
-Responsive layout
-Bootstrap icon
+* React Hooks
+* Responsive layout
+* Bootstrap icon
 
 # Getting Started with Create React App
 
