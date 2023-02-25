@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --general-color: #9a5f04;
+  --i-color: #9a5f04;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-image: linear-gradient(to right, #f9a826, #f9a826, #f9a826);
+  border-radius: 30px;
+  border-end-end-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, #ecaa3f, #a57831, #f6a21a);
+  border-radius: 20px;
+}
