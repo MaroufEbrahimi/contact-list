@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./ContactList.css";
 import ContactCard from "../ContactCard/ContactCard";
 
-const ContactList = () => {
+const ContactList = (props) => {
   const time = new Date().toLocaleTimeString();
   const [upTime, setUpTime] = useState(time);
 
@@ -12,6 +12,10 @@ const ContactList = () => {
     time = new Date().toLocaleTimeString();
     setUpTime(time);
   }, 1000);
+
+  const renderContactList = props.contacts.map((contact) => {
+    return <ContactCard key={contact.id} contact={contact} />;
+  });
 
   return (
     <div className="contact_list">
@@ -29,9 +33,7 @@ const ContactList = () => {
       </div>
 
       {/* render the contact card */}
-      <div className="render_contact_card">
-        <ContactCard />
-      </div>
+      <div className="render_contact_card">{renderContactList}</div>
 
       <div className="footer_area">
         <div>
