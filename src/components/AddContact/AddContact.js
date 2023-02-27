@@ -42,6 +42,13 @@ const AddContact = (props) => {
           <label>Phone Number</label>
         </div>
 
+        <div className="file_handler">
+          <input type="file" name="image-upload" id="input" accept="image/*" />
+          <label htmlFor="input" className="image-upload">
+            <i className="bi bi-image-fill" title="choose your photo"></i>
+          </label>
+        </div>
+
         <div className="submit">
           <input type="submit" value="Add" className="btn" />
         </div>
