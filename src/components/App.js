@@ -14,6 +14,13 @@ const App = () => {
     setContacts([...contacts, { id: uuidv4(), ...contact }]);
   };
 
+  const removeContactHandler = (id) => {
+    const newContactList = contacts.filter((contact) => {
+      return contact.id !== id;
+    });
+    setContacts(newContactList);
+  };
+
   return (
     <div className="container">
       <div>
@@ -21,7 +28,7 @@ const App = () => {
       </div>
 
       <div>
-        <ContactList contacts={contacts} />
+        <ContactList contacts={contacts} getContactId={removeContactHandler} />
       </div>
     </div>
   );
