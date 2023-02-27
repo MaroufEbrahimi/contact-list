@@ -4,6 +4,8 @@ import "./ContactCard.css";
 import profile from "../../images/profile.jpg";
 
 const ContactCard = (props) => {
+  const { id, name, number } = props.contact;
+
   return (
     <div className="contact_card">
       <div className="contact_card_divs">
@@ -12,8 +14,8 @@ const ContactCard = (props) => {
         </div>
 
         <div className="contact_card_ditails">
-          <h4>name</h4>
-          <p>0121212</p>
+          <h4>{name}</h4>
+          <p>{number}</p>
         </div>
 
         <div className="contact_card_delete">
