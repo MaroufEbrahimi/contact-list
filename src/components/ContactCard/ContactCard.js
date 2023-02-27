@@ -19,7 +19,7 @@ const ContactCard = (props) => {
         </div>
 
         <div className="contact_card_delete">
-          <i className="bi bi-trash"></i>
+          <i className="bi bi-trash" onClick={() => props.deleteHandler(id)}></i>
         </div>
       </div>
     </div>
