@@ -8,13 +8,23 @@ const ContactList = (props) => {
   const time = new Date().toLocaleTimeString();
   const [upTime, setUpTime] = useState(time);
 
+  const deleteContactHandler = (id) => {
+    props.getContactId(id);
+  };
+
   setInterval((time) => {
     time = new Date().toLocaleTimeString();
     setUpTime(time);
   }, 1000);
 
   const renderContactList = props.contacts.map((contact) => {
-    return <ContactCard key={contact.id} contact={contact} />;
+    return (
+      <ContactCard
+        key={contact.id}
+        contact={contact}
+        deleteHandler={deleteContactHandler}
+      />
+    );
   });
 
   return (
