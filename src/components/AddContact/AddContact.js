@@ -6,9 +6,20 @@ const AddContact = (props) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
+  const add = (e) => {
+    e.preventDefault();
+    if (name === "" || name === " " || number === "" || number === " ") {
+      alert("All the field are mandatory!");
+      return;
+    }
+    props.addContactHandler(name, number);
+    setName("");
+    setNumber("");
+  };
+
   return (
     <div className="login_container">
-      <form>
+      <form onSubmit={add}>
         <div className="input_box">
           <input
             type="text"
