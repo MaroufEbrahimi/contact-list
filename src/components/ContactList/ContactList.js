@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import "./ContactList.css";
+import ContactCard from "../ContactCard/ContactCard";
 
 const ContactList = () => {
   const time = new Date().toLocaleTimeString();
@@ -28,7 +29,9 @@ const ContactList = () => {
       </div>
 
       {/* render the contact card */}
-      <div className="render_contact_card"></div>
+      <div className="render_contact_card">
+        <ContactCard />
+      </div>
 
       <div className="footer_area">
         <div>
