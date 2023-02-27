@@ -1,0 +1,56 @@
+.contact_card {
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 7px;
+  box-shadow: 1px 1px 12px rgba(68, 106, 97, 0.3);
+  width: auto;
+  height: 11vh;
+  margin: 10px 0;
+}
+
+.contact_card_divs {
+  display: flex;
+}
+
+.contact_card_img {
+  display: flex;
+  padding: 6px 0px 6px 5px;
+}
+
+.contact_card_img img {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.contact_card_ditails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  width: 29.3vh;
+}
+
+.contact_card_delete {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.contact_card_delete i {
+  color: red;
+  font-size: 18px;
+}
+
+@media (max-width: 440px) {
+  .contact_card {
+    width: 70vw;
+  }
+
+  .contact_card_img {
+    padding: 10px 0px 5px 5px;
+  }
+
+  .contact_card_img img {
+    width: 47px;
+  }
+}
