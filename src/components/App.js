@@ -7,7 +7,6 @@ import ContactList from "./ContactList/ContactList";
 import "./App.css";
 
 const App = () => {
-  const LOCAL_STROAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
 
   const addContactHandler = (contact) => {
