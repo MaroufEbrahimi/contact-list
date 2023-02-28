@@ -1,16 +1,15 @@
 import React from "react";
 
 import "./ContactCard.css";
-import profile from "../../images/profile.jpg";
 
 const ContactCard = (props) => {
-  const { id, name, number } = props.contact;
+  const { id, name, number, file } = props.contact;
 
   return (
     <div className="contact_card">
       <div className="contact_card_divs">
         <div className="contact_card_img">
-          <img src={profile} />
+          <img src={file} />
         </div>
 
         <div className="contact_card_ditails">
@@ -19,7 +18,10 @@ const ContactCard = (props) => {
         </div>
 
         <div className="contact_card_delete">
-          <i className="bi bi-trash" onClick={() => props.deleteHandler(id)}></i>
+          <i
+            className="bi bi-trash"
+            onClick={() => props.deleteHandler(id)}
+          ></i>
         </div>
       </div>
     </div>
