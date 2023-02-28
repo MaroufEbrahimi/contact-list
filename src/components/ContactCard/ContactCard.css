@@ -19,7 +19,9 @@
 
 .contact_card_img img {
   width: 55px;
+  height: 55px;
   border-radius: 50%;
+  border: 1px solid rgba(126, 122, 122, 0.15);
 }
 
 .contact_card_ditails {
@@ -52,5 +54,6 @@
 
   .contact_card_img img {
     width: 47px;
+    height: 47px;
   }
 }
