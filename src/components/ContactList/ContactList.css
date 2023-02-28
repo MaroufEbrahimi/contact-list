@@ -3,6 +3,7 @@
   background: transparent;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
   height: 80vh;
+  width: 20vw;
   border-radius: 7px;
 }
 
@@ -47,10 +48,17 @@
 }
 
 /* media query */
+@media (max-width: 1000px) {
+  .contact_list {
+    width: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .contact_list {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    width: auto;
   }
 }
 
