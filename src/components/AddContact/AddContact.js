@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 import "./AddContact.css";
 
@@ -6,6 +6,17 @@ class AddContact extends Component {
   state = {
     name: "",
     number: "",
+    file: "",
+  };
+
+  imageHandler = (e) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        this.setState({ file: reader.result });
+      }
+    };
+    reader.readAsDataURL(e.target.files[0]);
   };
 
   add = (e) => {
@@ -20,7 +31,7 @@ class AddContact extends Component {
       return;
     }
     this.props.addContactHandler(this.state);
-    this.setState({ name: "", number: "" });
+    this.setState({ name: "", number: "", file: "" });
   };
 
   render() {
@@ -55,6 +66,7 @@ class AddContact extends Component {
               name="image-upload"
               id="input"
               accept="image/*"
+              onChange={this.imageHandler}
             />
             <label htmlFor="input" className="image-upload">
               <i className="bi bi-image-fill" title="choose your photo"></i>
